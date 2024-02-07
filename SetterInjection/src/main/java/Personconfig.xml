@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean class="Has_a_relationship.Person" id="p1">
+    <property name="name" value="Karthi"/>
+    </bean>
+    
+    <bean class="Has_a_relationship.Browser" id="b1">
+    
+    <property name="name" value="chrome"/>
+    <property name="version" value="1.0"/>
+    <property name="size" value="40.5"/>
+    <property name="p" ref="p1"/>
+                
+    </bean>
+</beans>
